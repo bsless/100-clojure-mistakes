@@ -462,3 +462,16 @@
 ;; Return something that can be waited on for synchronization
 
 ;; ## Having to mock System/currentTimeMillis
+
+;; # Interop
+
+;; ## Not turning on reflection warnings in EVERY NAMESPACE with interop
+
+(set! *warn-on-reflection* true)
+
+;; ## Being afraid of interop
+
+;; > Java interop is idiomatic Clojure - Alex Miller
+
+;; There doesn't have to be a pure Clojure implementation for
+;; everything, not a Clojure wrapper for every Java client
