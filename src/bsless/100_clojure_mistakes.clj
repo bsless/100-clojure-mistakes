@@ -163,6 +163,16 @@
   (catch Exception e
     (ex-message e)))
 
+;; ## Concat
+
+;; `concat` can [Blow up the stack](https://stuartsierra.com/2015/04/26/clojure-donts-concat)
+
+(def e
+  (try
+    (seq (nth (iterate #(concat % [1 2 3]) [1 2 3]) 8000))
+    (catch Throwable e
+      e)))
+
 ;; # Control Structures
 
 ;; ## `for` is not a loop
