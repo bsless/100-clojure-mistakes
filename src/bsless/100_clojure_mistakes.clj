@@ -101,9 +101,9 @@
 
 ;; ### Not understanding that everything is constant #3
 
-(def ^:constant b-constant 3)
+(def ^:const b-constant 3)
 
-;; The constant metadata influences compilation and inlines the form when it's referenced.
+;; The `:const` metadata influences compilation and inlines the form when it's referenced.
 ;; Rarely need to care about it unless dealing with specific performance optimizations
 
 ;; ## Misplaced doc strings
