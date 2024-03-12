@@ -137,6 +137,13 @@
 
 ;; Plenty of the mistakes above are caught by clj-kondo
 
+;; ## Not having style
+
+;; - Read *the* style guide https://github.com/bbatsov/clojure-style-guide
+;; - Refer to other style guides
+;;   - https://nextjournal.com/lambdaisland/clojure-style-guide
+;;   - https://github.com/metabase/metabase/wiki/Metabase-Clojure-Style-Guide
+
 ;; # Laziness
 
 ;; ## Doing lazy side effects
