@@ -492,3 +492,18 @@
 
 ;; There doesn't have to be a pure Clojure implementation for
 ;; everything, not a Clojure wrapper for every Java client
+
+;; # Memory
+
+;; ## Using memoization on unbounded input
+
+(def inc* (memoize inc))
+
+(doseq [i (range 10)]
+  (inc* i))
+
+;; ## Using multi methods on unbounded dispatch values
+
+;; Unbounded dispatch values for the `:default` case will lead to Out Of Memory Error.
+
+;; https://ask.clojure.org/index.php/10532/memory-leak-using-the-default-method-of-a-multimethod
